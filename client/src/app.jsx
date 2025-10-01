@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import Navbar from "./components/Navbar"
 import ProductList from "./components/ProductList"
 import ProductDetail from "./components/ProductDetail"
+import Footer from "./components/Footer"
 
 export default function App() {
   const [selectedProduct, setSelectedProduct] = useState(null)
@@ -29,6 +30,8 @@ export default function App() {
       ) : (
         <ProductList onProductClick={handleProductClick} />
       )}
+
+      <Footer />
     </div>
   )
 }
