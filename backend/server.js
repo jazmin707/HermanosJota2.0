@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path'); // <-- para manejar rutas de carpetas
 const app = express();
 const productosRouter = require('./routes/productos');
 
@@ -9,7 +10,8 @@ app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   next();
 });
-
+// Middleware para servir archivos estáticos desde /public
+app.use(express.static(path.join(__dirname, 'public')));
 // Rutas
 app.use('/api/productos', productosRouter);
 

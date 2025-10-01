@@ -1,7 +1,7 @@
 // backend/routes/productos.js
 const express = require("express");
 const router = express.Router();
-const productos = require("../data/productos"); 
+const productos = require("../productos"); 
 
 // GET /api/productos
 router.get("/", (req, res) => {
