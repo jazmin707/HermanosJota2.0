@@ -24,10 +24,7 @@ export default function ProductList({ onProductClick }) {
     <div>
       <h2>Lista de productos</h2>
       {productos.map(p => (
-        <div key={p.id} onClick={() => onProductClick(p)} style={{border:"1px solid gray", margin:"10px", padding:"10px", cursor:"pointer"}}>
-          <h3>{p.nombre}</h3>
-          <p>Precio: ${p.precio}</p>
-        </div>
+        <ProductCard key={p.id} producto={p} onClick={() => onProductClick(p)} />
       ))}
     </div>
   )
