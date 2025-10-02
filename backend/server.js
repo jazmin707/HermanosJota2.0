@@ -1,21 +1,14 @@
 const express = require('express');
-const path = require('path'); // <-- para manejar rutas de carpetas
+const path = require('path');
 const app = express();
 const productosRouter = require('./routes/productos');
+const logger = require('./middleware/logger'); // <-- nuevo import
 
 app.use(express.json());
-
-// Middleware para loguear cada request
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-});
-// Middleware para servir archivos estáticos desde /public
+app.use(logger); // <-- nuevo uso del middleware
 app.use(express.static(path.join(__dirname, 'public')));
-// Rutas
 app.use('/api/productos', productosRouter);
 
-// Puerto
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en puerto ${PORT}`);
