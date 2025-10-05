@@ -27,7 +27,8 @@ export default function ContactForm() {
     <div className="contact-form-container">
       <h1>Contacto</h1>
       <p>¿Tenés preguntas? Dejanos tu mensaje y te responderemos pronto.</p>
-      <form onSubmit={handleSubmit}>
+
+      <form id="form-contacto" onSubmit={handleSubmit}>
         <label htmlFor="nombre">Nombre:</label>
         <input
           type="text"
@@ -61,7 +62,11 @@ export default function ContactForm() {
         <button type="submit">Enviar</button>
       </form>
 
-      {exito && <div className="mensaje-exito">Gracias {nombre}, tu mensaje fue enviado.</div>}
+      {exito && (
+        <div id="mensaje-exito">
+          Gracias {nombre}, tu mensaje fue enviado.
+        </div>
+      )}
     </div>
   );
 }
