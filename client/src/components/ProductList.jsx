@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react"
-import ProductCard from "./ProductCard";
+import ProductCard from "./ProductCard"
 
 export default function ProductList({ onProductClick }) {
   const [productos, setProductos] = useState([])
-  const [cargando, setCargando]   = useState(true);
-  const [error, setError]       = useState(null);
+  const [cargando, setCargando] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     fetch("http://localhost:3000/api/productos")
       .then(res => {
-        if (!res.ok) throw new Error("Error al cargar productos");
-        return res.json();
+        if (!res.ok) throw new Error("Error al cargar productos")
+        return res.json()
       })
       .then(data => setProductos(data))
-      .catch(err => console.error(err))
-      .finally(() => setCargando(false));
+      .catch(err => setError(err.message))
+      .finally(() => setCargando(false))
   }, [])
 
-    if (cargando) return <p>Cargando...</p>
-    if (error) return <p> Error: {error} </p>
+  if (cargando) return <p>Cargando...</p>
+  if (error) return <p>Error: {error}</p>
 
   return (
     <div>
