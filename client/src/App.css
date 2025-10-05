@@ -1,3 +1,9 @@
+.App {
+  display: flex;
+  flex-direction: column; /* apila los elementos verticalmente */
+  align-items: center;    /* centra horizontalmente */
+  width: 100%;
+}
 /* GENERALES ----------------------------------------------------------------------- */
 * {
     box-sizing: border-box;

@@ -1,26 +1,26 @@
-import React, { useState } from "react"
-import "./App.css"
+import React, { useState } from "react";
+import "./App.css";
 
-import Navbar from "./components/Navbar"
-import ProductList from "./components/ProductList"
-import ProductDetail from "./components/ProductDetail"
-import Footer from "./components/Footer"
-import ContactForm from "./components/ContactForm"
+import Navbar from "./components/Navbar";
+import ProductList from "./components/ProductList";
+import ProductDetail from "./components/ProductDetail";
+import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 
 export default function App() {
-  const [selectedProduct, setSelectedProduct] = useState(null)
-  const [cart, setCart] = useState([])
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [cart, setCart] = useState([]);
 
   const handleProductClick = (product) => {
-    setSelectedProduct(product)
-  }
+    setSelectedProduct(product);
+  };
 
   const handleAddToCart = (product) => {
-    setCart([...cart, product])
-  }
+    setCart([...cart, product]);
+  };
 
   return (
-    <div>
+    <div className="App">
       <Navbar cartCount={cart.length} />
 
       {selectedProduct ? (
@@ -34,7 +34,7 @@ export default function App() {
       )}
 
       <Footer />
-      <ContactForm/>
+      <ContactForm />
     </div>
-  )
+  );
 }
