@@ -1,28 +1,11 @@
-import { useState } from 'react'
-import './App.css'
-import ContactForm from './components/ContactForm'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-
-      <ContactForm />
-    </>
-  )
-}
-
-export default App
-
-
-/*
-
 import React, { useState } from "react"
+import "./App.css"
+
 import Navbar from "./components/Navbar"
 import ProductList from "./components/ProductList"
 import ProductDetail from "./components/ProductDetail"
 import Footer from "./components/Footer"
+import ContactForm from "./components/ContactForm"
 
 export default function App() {
   const [selectedProduct, setSelectedProduct] = useState(null)
@@ -51,8 +34,7 @@ export default function App() {
       )}
 
       <Footer />
+      <ContactForm/>
     </div>
   )
 }
-
-*/
