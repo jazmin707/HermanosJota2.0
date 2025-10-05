@@ -9,7 +9,7 @@ module.exports = [
         acabado: "Aceite natural ecológico",
         peso: "68 kg", capacidad: "6 compartimentos interiores",
         destacado: true,
-        imagen: "./imagenes/Aparador Uspallata.png",
+        imagen: "/imagenes/Aparador Uspallata.png",
         precio: 600000
     },
     {
@@ -22,7 +22,7 @@ module.exports = [
         peso: "45 kg por estante",
         capacidad: "5 estantes ajustables",
         destacado: false,
-        imagen: "./imagenes/Biblioteca Recoleta.png",
+        imagen: "/imagenes/Biblioteca Recoleta.png",
         precio: 800000,
     },
     {
@@ -35,7 +35,7 @@ module.exports = [
         tapizado: "Repelente al agua y manchas",
         confort: "Espuma alta densidad",
         destacado: true,
-        imagen: "./imagenes/Butaca Mendoza.png",
+        imagen: "/imagenes/Butaca Mendoza.png",
         precio: 50000,
     },
     {
@@ -47,7 +47,7 @@ module.exports = [
         rotacion: "360° silenciosa y suave",
         garantia: "10 años en estructura",
         destacado: true,
-        imagen: "./imagenes/Sillón Copacabana.png",
+        imagen: "/imagenes/Sillón Copacabana.png",
         precio: 720000,
     },
     {
@@ -60,7 +60,7 @@ module.exports = [
         peso: "42 kg",
         cargaMax: "25 kg distribuidos",
         destacado: true,
-        imagen: "./imagenes/Mesa de Centro Araucaria.png",
+        imagen: "/imagenes/Mesa de Centro Araucaria.png",
         precio: 450000,
     },
     {
@@ -73,7 +73,7 @@ module.exports = [
         almacenamiento: "1 cajón + repisa inferior",
         caracteristicas: "Cajón con cierre suave",
         destacado: false,
-        imagen: "./imagenes/Mesa de Noche Aconcagua.png",
+        imagen: "/imagenes/Mesa de Noche Aconcagua.png",
         precio: 350000,
     },
     {
@@ -86,7 +86,7 @@ module.exports = [
         colchón: "Compatible con colchón 160x200",
         caracteristicas: "Cabecero flotante acolchado",
         destacado: true,
-        imagen: "./imagenes/Cama Neuquén.png",
+        imagen: "/imagenes/Cama Neuquén.png",
         precio: 1500000,
     },
     {
@@ -98,7 +98,7 @@ module.exports = [
         relleno: "Espuma HR + plumón reciclado",
         sostenibilidad: "Materiales 100% reciclables",
         destacado: false,
-        imagen: "./imagenes/Sofá Patagonia.png",
+        imagen: "/imagenes/Sofá Patagonia.png",
         precio: 1100000,
     },
     {
@@ -111,7 +111,7 @@ module.exports = [
         capacidad: "6-10 comensales",
         extension: "Sistema de mariposa central",
         destacado: false,
-        imagen: "./imagenes/Mesa Comedor Pampa.png",
+        imagen: "/imagenes/Mesa Comedor Pampa.png",
         precio: 990000
     },
     {
@@ -124,7 +124,7 @@ module.exports = [
         apilables: "Hasta 6 sillas",
         incluye: "Set de 4 sillas",
         destacado: false,
-        imagen: "./imagenes/Sillas Córdoba.png",
+        imagen: "/imagenes/Sillas Córdoba.png",
         precio: 450000,
     },
     {
@@ -137,7 +137,7 @@ module.exports = [
         almacenamiento: "1 cajón con organizador",
         cables: "Pasacables integrado",
         destacado: false,
-        imagen: "./imagenes/Escritorio Costa.png",
+        imagen: "/imagenes/Escritorio Costa.png",
         precio: 640000,
     },
     {
@@ -150,7 +150,7 @@ module.exports = [
         regulacion: "Altura + inclinación respaldo",
         certificacion: "Ergonomía europea EN 1335",
         destacado: false,
-        imagen: "./imagenes/Silla de Trabajo Belgrano.png",
+        imagen: "/imagenes/Silla de Trabajo Belgrano.png",
         precio: 400000
     } 
 ];
