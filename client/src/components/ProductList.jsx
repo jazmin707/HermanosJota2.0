@@ -21,11 +21,14 @@ export default function ProductList({ onProductClick }) {
   if (error) return <p>Error: {error}</p>
 
   return (
-    <div>
-      <h2>Lista de productos</h2>
+  <div>
+    <h2 className="titulos">Lista de productos</h2>
+    <div id="grilla-productos">
       {productos.map(p => (
         <ProductCard key={p.id} producto={p} onClick={() => onProductClick(p)} />
       ))}
     </div>
-  )
+  </div>
+)
+
 }
