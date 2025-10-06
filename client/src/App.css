@@ -6,17 +6,18 @@
     padding: 0;
 }
 body {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    margin: 0;
     padding: 0 20px;
     background-color: #F5E6D3;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: block;
+  padding-top: 120px; 
 }
+
 
 
 p {
@@ -333,13 +334,31 @@ main p {
 
 #form-contacto input,
 #form-contacto textarea {
-    padding: 10px 15px;
-    border: 2px solid #C47A6D;
-    /* Rosa Polvoriento */
-    border-radius: 8px;
-    font-family: "Inter", system-ui, sans-serif;
-    font-size: 11pt;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #C47A6D;
+  border-radius: 8px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 11pt;
+  padding: 10px 15px;
 }
+.contact-form-container h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  color: #A0522D;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-form-container p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 
 #form-contacto input:focus,
 #form-contacto textarea:focus {
@@ -450,15 +469,16 @@ main p {
 }
 
 .tarjeta-individual {
-    width: 280px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    text-align: center;
-    position: relative;
+  width: 100%;
+  max-width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
 }
+
+
 
 /*-agregar tipo de letra*/
 .tarjeta-individual h3 {
@@ -478,10 +498,12 @@ main p {
 }
 
 .tarjeta-individual img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }
+
 
 .hero-banner {
     background-color: #F5E6D3;
@@ -598,12 +620,14 @@ main p {
 }
 
 #grilla-productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    justify-content: center;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
 }
+
+
 
 .tarjeta {
     width: 350px;
@@ -883,4 +907,70 @@ i {
     hero {
         background-position: top;
     }
+}
+.contenedor-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.imagen-producto {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+@media (max-width: 1024px) {
+  #grilla-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #grilla-productos {
+    grid-template-columns: 1fr;
+  }
+}
+h1.titulo-principal {
+  background-color: #A0522D; /* Siena Tostado */
+  color: #F5E6D3; /* Alabastro Cálido */
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A0522D; /* Siena Tostado */
+  padding: 20px 40px;
+  color: #F5E6D3; /* Alabastro Cálido */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.titulo-navbar {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+  color: #F5E6D3;
+}
+
+.carrito-navbar {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #F5E6D3;
 }
